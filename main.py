@@ -7,8 +7,8 @@ import sys
 import os
 
 
-def get_color():
-    # 获取随机颜色
+# def get_color():
+#     # 获取随机颜色
 #     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
 #     color_list = get_colors(100)
 #     return random.choice(color_list)
@@ -188,67 +188,67 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         "data": {
             "date": {
                 "value": "{} {}".format(today, week),
-                "color": get_color()
+                "color": 000
             },
             "region": {
                 "value": region_name,
-                "color": get_color()
+                "color": 000
             },
             "weather": {
                 "value": weather,
-                "color": get_color()
+                "color": 000
             },
             "temp": {
                 "value": temp,
-                "color": get_color()
+                "color": 000
             },
             "wind_dir": {
                 "value": wind_dir,
-                "color": get_color()
+                "color": 000
             },
             "love_day": {
                 "value": love_days,
-                "color": get_color()
+                "color": 000
             },
             "note_en": {
                 "value": note_en,
-                "color": get_color()
+                "color": 000
             },
             "note_ch": {
                 "value": note_ch,
-                "color": get_color()
+                "color": 000
             },
             "max_temp": {
                 "value": max_temp,
-                "color": get_color()
+                "color": 000
             },
             "min_temp": {
                 "value": min_temp,
-                "color": get_color()
+                "color": 000
             },
             "sunrise": {
                 "value": sunrise,
-                "color": get_color()
+                "color": 000
             },
             "sunset": {
                 "value": sunset,
-                "color": get_color()
+                "color": 000
             },
             "category": {
                 "value": category,
-                "color": get_color()
+                "color": 000
             },
             "pm2p5": {
                 "value": pm2p5,
-                "color": get_color()
+                "color": 000
             },
             "proposal": {
                 "value": proposal,
-                "color": get_color()
+                "color": 000
             },
             "chp": {
                 "value": chp,
-                "color": get_color()
+                "color": 000
             },
 
         }
@@ -261,7 +261,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         else:
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
-        data["data"][key] = {"value": birthday_data, "color": get_color()}
+        data["data"][key] = {"value": birthday_data, "color": 000}
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
